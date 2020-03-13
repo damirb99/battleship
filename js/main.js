@@ -6,13 +6,6 @@ const shipLocations = [];
 
 function placeShipsOnMap() {
 
-   /* for (let i = 0; i < SHIPS; ++i){
-        const row = Math.round(Math.random() * ROWS);
-        const col = Math.round(Math.random() * COLS);
-
-    }*/
-
-
 
     let placedShips = 0;
     while (placedShips < SHIPS) {
@@ -32,6 +25,7 @@ function placeShipsOnMap() {
     }
 }
 
+//?????
 function shipCanBePlaced(row, col) {
     console.log(`Checking can ship be placed at location: ${row}, ${col}...`)
     for (let i = 0; i < shipLocations.length; ++i) {
@@ -53,11 +47,8 @@ function generateMap() {
 
         for (let col = 0; col < COLS; ++col) {
             const field = document.createElement("td");
-           // field.innerHTML = "&nbsp;";
-           // field.id = `${row}${col}`; ?????
             field.id = `${row}${col}`;
-
-            //field.onclick = () => { attackShip(row, col); };
+           
             field.onclick = function(){
                 attackShip(row, col)
             }
